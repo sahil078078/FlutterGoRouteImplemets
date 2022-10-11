@@ -1,7 +1,13 @@
 import 'package:flutter/material.dart';
 
 class Oct11Page5 extends StatelessWidget {
-  const Oct11Page5({Key? key}) : super(key: key);
+  final String id;
+  final String? filter;
+  const Oct11Page5({
+    Key? key,
+    required this.id,
+    required this.filter,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

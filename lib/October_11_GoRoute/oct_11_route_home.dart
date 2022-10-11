@@ -38,6 +38,7 @@ class Oct11RouteHome extends StatelessWidget {
                   GoRouter.of(context).push(
                     Oct11RoutePages.oct11page1,
                     extra: value,
+                    
                   );
                 },
                 child: const Text('Page1'),

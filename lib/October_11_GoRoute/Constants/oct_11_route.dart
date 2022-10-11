@@ -29,6 +29,19 @@ final GoRouter oct11Route = GoRouter(
           return const NoDataPage();
         }
       },
+      routes: [
+        GoRoute(
+          path: 'page5/:id', // pasing a parameters
+          builder: (context, state) => Oct11Page5(
+            id: state.params['id']!,
+            filter: state.queryParams['filter'],
+          ),
+        ),
+        GoRoute(
+          path: 'page6',
+          builder: (context, state) => const Oct11Page6(),
+        ),
+      ],
     ),
     GoRoute(
       path: Oct11RoutePages.oct11page2,
@@ -65,14 +78,6 @@ final GoRouter oct11Route = GoRouter(
           ],
         ),
       ],
-    ),
-    GoRoute(
-      path: Oct11RoutePages.oct11page5,
-      builder: (context, state) => const Oct11Page5(),
-    ),
-    GoRoute(
-      path: Oct11RoutePages.oct11page6,
-      builder: (context, state) => const Oct11Page6(),
     ),
   ],
 );

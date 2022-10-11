@@ -1,4 +1,4 @@
-import 'dart:developer';
+import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -51,7 +51,7 @@ class Oct11Page1 extends StatelessWidget {
                   final int? value = controller.text.isNotEmpty
                       ? int.parse(controller.text.trim())
                       : null;
-                  log('value : $value');
+
                   GoRouter.of(context).push(
                     Oct11RoutePages.oct11page2,
                     extra: value,
@@ -71,6 +71,28 @@ class Oct11Page1 extends StatelessWidget {
                   );
                 },
                 child: const Text('Page4'),
+              ),
+              const SizedBox(height: 20),
+              const Text('for pass parameters'),
+              const SizedBox(height: 20),
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  elevation: 0,
+                  backgroundColor: Colors.amberAccent,
+                ),
+                onPressed: () {
+                  var id = Random().nextInt(100);
+                  var filter = '';
+                  // context.go('${Oct11RoutePages.oct11page1}/page5/$id');
+                  GoRouter.of(context).push(
+                    '${Oct11RoutePages.oct11page1}/page5/$id?filter=$filter',
+                  );
+
+                  // upper both work same
+                },
+                child: const Text(
+                  'Page5 Parameters',
+                ),
               ),
             ],
           ),
