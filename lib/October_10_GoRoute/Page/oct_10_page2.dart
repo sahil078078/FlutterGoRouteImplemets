@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_go_route_implements/10October_GoRoute/Constants/oct_10_routes_pages.dart';
+import 'package:flutter_go_route_implements/October_10_GoRoute/Constants/oct_10_routes_pages.dart';
 import 'package:go_router/go_router.dart';
 
 class Oct10Page2 extends StatelessWidget {

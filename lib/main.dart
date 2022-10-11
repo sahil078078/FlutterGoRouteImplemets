@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '10October_GoRoute/Constants/oct_10_routes.dart';
+import 'October_11_GoRoute/Constants/oct_11_route.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,9 +13,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp.router(
       title: 'Go Router Flutter',
       debugShowCheckedModeBanner: false,
-      routerDelegate: oct10Route.routerDelegate,
-      routeInformationParser: oct10Route.routeInformationParser,
-      routeInformationProvider: oct10Route.routeInformationProvider,
+      routerDelegate: oct11Route.routerDelegate,
+      routeInformationParser: oct11Route.routeInformationParser,
+      routeInformationProvider: oct11Route.routeInformationProvider,
     );
   }
 }
